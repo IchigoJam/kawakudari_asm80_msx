@@ -3,6 +3,35 @@
 - kawakudari for MSX with [ASM80](https://www.asm80.com/) ([asm80-core](https://github.com/asm80/asm80-core/))
 - [run on MIX](https://github.com/ichigojam/MIX) (see also [openMSX ver](https://github.com/IchigoJam/kawakudari_sdcc_msx/tree/openMSX))
 
+## tutorial
+
+make mix.asm
+```asm
+  .org 0x4000
+  .dw 0x4241
+  .dw 0x4010 ; init
+  .dw 0
+  .dw 0
+  .dw 0
+  .dw 0
+  .dw 0
+  .dw 0
+
+  ld a, "M"
+  call 0x00A2
+  ld a, "I"
+  call 0x00A2
+  ld a, "X"
+  call 0x00A2
+
+Loop:
+  jr Loop
+```
+compile and run
+```sh
+deno --allow-read --allow-import https://ichigojam.github.io/kawakudari_asm80_msx/run80.js mix.asm | sh
+```
+
 ## compile & run
 
 ```sh
