@@ -8,24 +8,17 @@
 make mix.asm
 ```asm
   .org 0x4000
-  .dw 0x4241
-  .dw 0x4010 ; init
-  .dw 0
-  .dw 0
-  .dw 0
-  .dw 0
-  .dw 0
-  .dw 0
+  .dw 0x4241, 0x4010, 0, 0, 0, 0, 0, 0
 
-  ld a, "M"
+  ld a, 'M'
   call 0x00A2
-  ld a, "I"
+  ld a, 'I'
   call 0x00A2
-  ld a, "X"
+  ld a, 'X'
   call 0x00A2
 
-Loop:
-  jr Loop
+loop:
+  jr loop
 ```
 compile and run
 ```sh

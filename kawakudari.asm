@@ -1,12 +1,5 @@
   .org 0x4000
-  .dw 0x4241
-  .dw 0x4010 ; main
-  .dw 0
-  .dw 0
-  .dw 0
-  .dw 0
-  .dw 0
-  .dw 0
+  .dw 0x4241, 0x4010, 0, 0, 0, 0, 0, 0
 
 main:
   ; cls
