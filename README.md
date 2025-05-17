@@ -1,7 +1,7 @@
 # kawakudari for MSX with ASM80
 
 - kawakudari for MSX with [ASM80](https://www.asm80.com/) ([asm80-core](https://github.com/asm80/asm80-core/))
-- [run on MIX](https://github.com/ichigojam/MIX)
+- run on [MIX](https://github.com/ichigojam/MIX)
 
 ## tutorial
 
